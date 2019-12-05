@@ -1,0 +1,115 @@
+.stair-nav{
+    .nav-bulik{
+        .nav-content{
+            .list-content{
+                margin: 20px 30px;
+                position: relative;
+                cursor: pointer;
+                &:hover{
+                    color: #027938 !important;
+                }
+            }
+            :hover .nav-hov{
+                display: block;
+            }
+            .nav-hov{
+                position: absolute;
+                padding: 5px 61px 5px 15px;
+                display: none;
+                background-color: white;
+                li{
+                    padding: 5px 0;
+                    cursor: pointer;
+                    &:hover{
+                        color: #027938 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+// 二级导航
+.second-nav{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    // height: 308px;
+   .second-list{
+        border: 1px solid;
+   }
+}
+// 改二级导航样式
+/deep/.el-menu-item{
+    height: 42px;
+    line-height:40px;
+ }
+ /deep/.el-submenu__title{
+     height: 42px;
+     line-height:40px;
+ }
+.draw-enter-active, .draw-leaxe-active{
+    transition: all 5s ease;
+}
+.draw-enter, .draw-leave-to{
+    height: 0;
+}
+.breadcrumbs{
+    display: none;
+    cursor: pointer;
+    span{
+        font-size: 30px;
+    }
+}
+// 控制比例
+@media only screen and (max-width:767px) {
+    .nav-content{
+        display: none;
+    }
+    .breadcrumbs{
+        display: block;
+    }
+}
+
+@media(min-width:768px) {
+    .justify-be{
+        flex-direction: column;
+        align-items: inherit;
+    }
+    .nav-bulik{
+        .nav-content{
+            .list-content{
+                margin: 20px 25px !important;
+            }   
+        }   
+    }
+    .second-nav{
+        display: none;
+    }
+}
+@media(min-width:992px) {
+    .nav-bulik{
+        .nav-content{
+            .list-content{
+                margin: 20px 25px !important;
+            }   
+        }   
+    }
+    .justify-be{
+        flex-direction: inherit;
+        align-items: inherit;
+    }
+    .second-nav{
+        display: none;
+    }
+}
+@media(min-width:1200px ) {
+    .second-nav{
+        display: none;
+    }
+    .hader-navlist{
+        flex-direction: inherit;
+    }
+	.container{
+		width: 1170px;
+    }	
+}
