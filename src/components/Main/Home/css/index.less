@@ -1,0 +1,187 @@
+// 轮播图片
+@import '~comcolor';
+.home{
+    /deep/ .el-carousel__container{
+        height: 390px;
+    }
+}
+// 首页第一个列表
+.home-list{
+    padding: 70px 0;
+    .title{
+        h2{
+            font-size: 26px;
+            margin-top: 0px;
+            font-weight: 600;
+            color: @text-darkgreen;
+        }
+    }
+    .home-line{
+        width: 100%;
+        height: 11px;
+        text-align: center;
+        overflow: hidden;
+        background: url('../../../image/1514365123.png')center no-repeat;
+    }
+    .home-desc{
+        font-size: 16px;
+        text-align: center;
+        width: 80%;
+        color: #959595;
+        margin: 5px auto 0px auto;
+    }
+}
+.home-list-bliuk{
+    li{
+        margin-bottom: 22px;
+        &:hover{
+            box-shadow: 0 0 10px #37474f;
+        }
+        .content-img{
+            overflow: hidden;
+            img{
+                width: 100%;
+                height:100%;
+                transition: all 0.6s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .content-bulik{
+            .des{
+                margin:11px 0;
+            }
+            padding: 30px 25px;
+            .widget-title{
+                margin-top: 0;
+                color: #37474f;
+                text-transform: capitalize;
+                font-size:24px;
+            }
+        }
+    }
+}
+.examine{
+    border: 1px solid @text-darkgreen;
+    padding: 10px 40px;
+    color:  @text-darkgreen;
+    &:hover{
+        border-color:@text-darkgreen;
+    }
+}
+// home第三
+.home-journalism{
+    position: relative;
+    .journalism-title{
+        position: relative;
+        overflow: hidden;
+        border-bottom: #ddd;
+        &::after{
+            position: absolute;
+            content: '';
+            background: @text-darkgreen;
+            height: 3px;
+            width: 105px;
+            bottom: 0;
+            left: 0;
+            bottom: -2px;
+        
+        }
+    }
+    .title-border{
+        border-bottom:1px solid #ddd;
+    }
+    .more{
+        color: @text-darkgreen ;
+        background-color: #d9d9d9;
+        color: #027938;
+        padding: 2px 15px;
+        font-size: 14px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .journalism-text{
+        display: block;
+        position: absolute;
+        width: 100%;
+        background: rgba(127, 140, 141, 0.58);
+        padding: 0 25px;
+        bottom: 32px;
+        .text{
+            font-size: 18px;
+            color: @text-white;
+            padding: 10px 0;
+        }
+    }
+    .news-list-bulik{
+        li{
+            border-bottom: 1px dashed #c0c0c0;
+            .title{
+                span{
+                     background-color: @text-darkgreen;
+                     color: @text-white;
+                     padding:  2px 5px;
+                     border-radius:3px;
+                }
+             }
+             .content{
+                 color: #c0c0c0;
+             }
+        }
+    }
+}
+.journalism-text-box{
+    /deep/.el-carousel__indicators{
+        display: none;
+    }
+}
+// home第四
+.home-there-box{
+    h3{
+        font-size: 24px;
+        color: #37474f;
+        span{
+            color:  @text-darkgreen;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
+.friendship-box{
+    li{
+        width:23%;
+        border: 1px solid #e0e0e0;
+    }
+}
+
+// 百分比
+@media(min-width:768px) {
+	.home-list-bliuk{
+        li{
+            width: 100%;
+        }
+    }
+}
+@media(min-width:769px) {
+	.home-list-bliuk{
+        li{
+            width:48%;
+        }
+    }
+}
+@media(min-width:992px) {
+	.home-list-bliuk{
+        li{
+            width: 46%;
+        }
+    }
+}
+
+@media(min-width:1200px ) {
+	.home-list-bliuk{
+        li{
+            width: 24%;
+        }
+    }
+}

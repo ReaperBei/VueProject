@@ -46,11 +46,41 @@
                </div>
             </div>
         </div>
+        <div>
+            <div class="footer">
+                <div class="gotop el-icon-arrow-up" v-show="gotop" @click="toTop"></div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      gotop: false
+    }
+  },
+  mounted () {
+　　// 此处true需要加上，不加滚动事件可能绑定不成功
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  methods: {
+    handleScroll () {
+      let scrolltop = document.documentElement.scrollTop || document.body.scrollTop
+      scrolltop > 800 ? (this.gotop = true) : (this.gotop = false)
+    },
+    toTop () {
+      let top = document.documentElement.scrollTop || document.body.scrollTop
+      // 实现滚动效果 
+      const timeTop = setInterval(() => {
+        document.body.scrollTop = document.documentElement.scrollTop = top -= 50
+        if (top <= 0) {
+          clearInterval(timeTop)
+        }
+      }, 10)
+    }
+  }
 }
 </script>
 <style lang="less" scoped>

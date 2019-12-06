@@ -17,7 +17,7 @@
             <li>
               <router-link to>
                 <div class="flex list-content">
-                  关于我们
+                  <span>关于我们</span>
                   <span class="el-icon-caret-bottom"></span>
                 </div>
               </router-link>

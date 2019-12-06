@@ -33,12 +33,17 @@ ul{
     content: '';
     clear: both;
 }
+// h 大小
+h1, h2, h3, b, strong {
+    font-weight: bold;
+}
 // flex布局
 .flx{
     display: flex;
 }
 .justify-be{
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .justify-ar{
     justify-content: space-around;
@@ -56,6 +61,13 @@ ul{
         width: (@i * 100% / @n);
     }
     .genewidth-columns(@n,(@i + 1))
+}
+.geneheight-columns(6);
+.geneheight-columns(@n, @i:1) when (@i =< @n){
+    .colheight-@{i}{
+        height: (@i * 100% / @n);
+    }
+    .geneheight-columns(@n,(@i + 1))
 }
 
 // 字体大小

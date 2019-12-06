@@ -2,7 +2,7 @@
     .nav-bulik{
         .nav-content{
             .list-content{
-                margin: 20px 30px;
+                padding: 20px 25px;
                 position: relative;
                 cursor: pointer;
                 &:hover{
@@ -10,13 +10,16 @@
                 }
             }
             :hover .nav-hov{
-                display: block;
+                visibility: inherit;
+                opacity: 1;
             }
             .nav-hov{
                 position: absolute;
                 padding: 5px 61px 5px 15px;
-                display: none;
+                visibility: hidden;
+                opacity: 0;
                 background-color: white;
+                z-index: 9;
                 li{
                     padding: 5px 0;
                     cursor: pointer;
@@ -33,7 +36,7 @@
     position: absolute;
     background-color: white;
     width: 100%;
-    // height: 308px;
+    z-index: 99;
    .second-list{
         border: 1px solid;
    }
@@ -75,25 +78,11 @@
         flex-direction: column;
         align-items: inherit;
     }
-    .nav-bulik{
-        .nav-content{
-            .list-content{
-                margin: 20px 25px !important;
-            }   
-        }   
-    }
     .second-nav{
         display: none;
     }
 }
 @media(min-width:992px) {
-    .nav-bulik{
-        .nav-content{
-            .list-content{
-                margin: 20px 25px !important;
-            }   
-        }   
-    }
     .justify-be{
         flex-direction: inherit;
         align-items: inherit;
