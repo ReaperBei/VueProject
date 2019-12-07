@@ -7,13 +7,13 @@
                 </div>
                 <div class="home-line"></div>
             </div>
-            <el-carousel class="journalism-text-box" indicator-position="outside">
+            <el-carousel class="journalism-text-box firm-box" indicator-position="outside">
                 <el-carousel-item class="cliarfix" v-for="item in 3" :key="item">
-                        <div class="flx">
-                            <div class="fl column-3">
-                                <img class="max-w" src="../../image/945ce8ef2c6baef6f98f358635774d6c.jpg" alt="">
+                        <div class="flx firm-list">
+                            <div class="fl column-3 firm-left">
+                                <img class="column-6 colheight-5" src="../../image/945ce8ef2c6baef6f98f358635774d6c.jpg" alt="">
                             </div>
-                            <div class="fl column-3 home-there-box padding-l-25">
+                            <div class="fl column-3 firm-right home-there-box padding-l-25">
                                 <h3>
                                     独特地理环境
                                     <span>/01</span>

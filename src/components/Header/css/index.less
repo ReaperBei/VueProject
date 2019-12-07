@@ -4,6 +4,7 @@
             .list-content{
                 padding: 20px 25px;
                 position: relative;
+                display: inline-flex;
                 cursor: pointer;
                 &:hover{
                     color: #027938 !important;
@@ -29,6 +30,12 @@
                 }
             }
         }
+    }
+}
+// 选中路由的样式
+.router-link-exact-active {
+    &.router-link-active{
+        color: #027938;
     }
 }
 // 二级导航

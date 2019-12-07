@@ -10,13 +10,13 @@
         <div class="nav-bulik">
           <ul class="flx nav-content">
             <li>
-              <router-link to>
-                <div class="flex list-content">网页首页</div>
+              <router-link to="/">
+                <div class="list-content">网页首页</div>
               </router-link>
             </li>
             <li>
-              <router-link to>
-                <div class="flex list-content">
+              <router-link to="About">
+                <div class="list-content">
                   <span>关于我们</span>
                   <span class="el-icon-caret-bottom"></span>
                 </div>
@@ -29,8 +29,8 @@
               </ul>
             </li>
             <li>
-              <router-link to>
-                <div class="flex list-content">
+              <router-link to="Product">
+                <div class="list-content">
                   产品中心
                   <span class="el-icon-caret-bottom"></span>
                 </div>
@@ -43,13 +43,13 @@
               </ul>
             </li>
             <li>
-              <router-link to>
-                <div class="flex list-content">网上商城</div>
+              <router-link to="Shopping">
+                <div class="list-content">网上商城</div>
               </router-link>
             </li>
             <li>
-              <router-link to>
-                <div class="flex list-content">
+              <router-link to="News">
+                <div class="list-content">
                   新闻中心
                   <span class="el-icon-caret-bottom"></span>
                 </div>
@@ -62,8 +62,8 @@
               </ul>
             </li>
             <li>
-              <router-link to>
-                <div class="flex list-content">
+              <router-link to="Service">
+                <div class="list-content">
                   服务支持
                   <span class="el-icon-caret-bottom"></span>
                 </div>
@@ -97,12 +97,12 @@
                 >
                   <el-menu-item index="1">
                     <template slot="title">
-                      <span>网站首页</span>
+                      <router-link to="/"><span>网站首页</span></router-link>
                     </template>
                   </el-menu-item>
                   <el-submenu index="2">
                     <template slot="title">
-                      <span>关于我们</span>
+                      <router-link to="/About"><span>关于我们</span></router-link>
                     </template>
                     <el-menu-item-group>
                       <el-menu-item index="2-1">企业概况</el-menu-item>
@@ -113,7 +113,7 @@
                   </el-submenu>
                   <el-submenu index="3">
                     <template slot="title">
-                      <span>产品中心</span>
+                      <router-link to="/Product"><span>产品中心</span></router-link>
                     </template>
                     <el-menu-item-group>
                       <el-menu-item index="3-1">人民小酒</el-menu-item>
@@ -123,11 +123,11 @@
                     </el-menu-item-group>
                   </el-submenu>
                   <el-menu-item index="4">
-                    <span slot="title">导航四</span>
+                    <router-link to="/Shopping"><span>商城</span></router-link>
                   </el-menu-item>
                   <el-submenu index="5">
                     <template slot="title">
-                      <span>新闻中心</span>
+                      <router-link to="/News"><span>新闻中心</span></router-link>
                     </template>
                     <el-menu-item-group>
                       <el-menu-item index="5-1">公司新闻</el-menu-item>
@@ -138,7 +138,7 @@
                   </el-submenu>
                   <el-submenu index="6">
                     <template slot="title">
-                      <span>服务支持</span>
+                      <router-link to="/Service"><span>服务支持</span></router-link>
                     </template>
                     <el-menu-item-group>
                       <el-menu-item index="5-1">招商加盟</el-menu-item>

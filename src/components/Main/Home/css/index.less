@@ -5,7 +5,7 @@
         height: 390px;
     }
 }
-// 首页第一个列表
+// 人名的小酒
 .home-list{
     padding: 70px 0;
     .title{
@@ -70,7 +70,7 @@
         border-color:@text-darkgreen;
     }
 }
-// home第三
+// home新闻
 .home-journalism{
     position: relative;
     .journalism-title{
@@ -136,7 +136,7 @@
         display: none;
     }
 }
-// home第四
+// 企业优势
 .home-there-box{
     h3{
         font-size: 24px;
@@ -148,6 +148,7 @@
         }
     }
 }
+// 
 .friendship-box{
     li{
         width:23%;
@@ -156,6 +157,35 @@
 }
 
 // 百分比
+@media(min-width:100px) and (max-width:768px){
+    .journalism-left,.journalism-right{
+        width: 100%;
+    }
+    .journalism-right{
+        padding-left:0 ;
+    }
+    .home-journalism {
+        .journalism-text{
+            bottom: 0;
+        }
+    }
+    .firm-list{
+        flex-direction: column;
+    }
+    .firm-left, .firm-right{
+        width: 100%;
+    }
+    .firm-box{
+        /deep/.el-carousel__container{
+            height: 600px;
+            display: block;
+            position: relative;
+        }
+    }
+    .home-list{
+        padding: 20px 0;
+    }
+}
 @media(min-width:768px) {
 	.home-list-bliuk{
         li{
@@ -173,7 +203,7 @@
 @media(min-width:992px) {
 	.home-list-bliuk{
         li{
-            width: 46%;
+            width: 23%;
         }
     }
 }
