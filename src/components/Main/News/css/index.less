@@ -1,0 +1,63 @@
+@import '~comcolor';
+.company-left{
+    width: 75%;
+    li{
+        h4{
+           a{
+                color: @text-main;
+                &:hover{
+                    color: @text-darkgreen;
+                    text-decoration: underline;
+                }
+            }
+        }
+        p{
+            color: @text-lightgr;
+        }
+    }
+}
+.company-right{
+    width: 25%;
+    .company-right-list{
+        border: 1px solid #e4eaec;
+        li {
+            border-bottom: 1px solid #e4eaec;
+            padding: 10px 20px;
+            a{
+                &:hover{
+                    text-decoration: underline;
+                    color: @text-darkgreen;
+                }
+            }
+    }
+    }
+}
+.company-right-list li:last-child{
+    border-bottom: none;
+ }
+ @media(min-width:100px) and (max-width:768px){
+    .company-left,.company-right{
+        width: 100%;
+    }
+}
+@media(min-width:768px){
+    .company-left,.company-right{
+        width: 100%;
+    }
+}
+@media(min-width:992px){
+    .company-left{
+        width:75%;
+    }
+    .company-right{
+        width: 25%;
+    }
+}
+@media(min-width:1200px){
+    .company-left{
+        width:75%;
+    }
+    .company-right{
+        width: 25%;
+    }
+}

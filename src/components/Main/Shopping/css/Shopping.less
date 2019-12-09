@@ -1,0 +1,26 @@
+@import '~comcolor';
+.Shopping-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .Shopping-conent{
+        width: 49%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        color: @text-white;
+        margin-bottom: 25px;
+        &.wechat{
+            background-color: @color-darkgreen;
+        }
+        .right{
+            width: 100px;
+            .att_item_code{
+                display: inline-flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+    }
+}

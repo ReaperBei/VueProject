@@ -1,0 +1,50 @@
+@import '~comcolor';
+.relation-tab{
+    font-size: 16px;
+    color: #90939b;
+    overflow: hidden;
+}
+.blue{
+    a{
+        border-bottom: 2px solid @text-darkgreen;
+    }
+}
+.relation-box{
+    .relation-content{
+        width: 49%;
+        .content{
+            color: @text-main;
+        }
+        .dashed{
+            border: 0.5px dashed @text-main;
+        }
+    }
+}
+@media(min-width:100px) and (max-width:767px){
+    .relation-box{
+        .relation-content{
+            width:100%;
+        }   
+    }
+}
+@media(min-width:768px){
+    .relation-box{
+        .relation-content{
+            width: 49%;
+        }   
+    }
+}
+@media(min-width:992px){
+    .relation-box{
+        .relation-content{
+            width: 49%;
+        }   
+    }
+}
+@media(min-width:1200px){
+    .relation-box{
+        .relation-content{
+            width: 49%;
+        }   
+    }
+}

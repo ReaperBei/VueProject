@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="flx justify-be flxalign-cent stair-nav">
-        <router-link to>
+        <router-link to="/">
           <div>
             <img class="max-w" src="../image/1a4cd606030f2e0b7d94d73a2aa0bf65.png" alt="加载中..." />
           </div>

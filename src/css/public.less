@@ -16,6 +16,12 @@ a {
 .max-w{
     max-width: 100%;
 }
+.line-height-30{
+    line-height: 30px;
+}
+.margin-auto{
+    margin: 0 auto;
+}
 a:active, a:hover {
 	outline: 0
 }
@@ -77,10 +83,10 @@ h1, h2, h3, b, strong {
 }
 
 // 字体大小
-.genefont-columns(6);
+.genefont-columns(40);
 .genefont-columns(@n, @i:10) when (@i =< @n){
     .font-@{i}{
-        font-size: (@i + 2px);
+        font-size: (@i + 0px);
     }
     .genefont-columns(@n,(@i + 1))
 }

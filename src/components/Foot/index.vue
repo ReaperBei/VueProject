@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container foot-buliks">
+        <div class="container foot-buliks padding-tb-30">
             <div class="flx">
                <div class="foot-list col-md-2 col-sm-6 col-xs-6 list masonry-item item-show">
                    <h4 class="title">关于我们</h4>

@@ -1,17 +1,11 @@
 <template>
   <div>
     <div>
-      <div>
-        <img
-          class='column-6 vertical-mod'
-          src='../../image/f5e7b99eae865952c337af100cdb4110(2).jpg'
-          alt
-        />
-      </div>
+      <comImg />
       <div class='about-nav'>
         <ul class='flx justify-cent'>
           <li class='padding-10'>
-            <router-link name="Summarize" to='/About/Summarize'>企业概述</router-link>
+            <router-link name="Summarize" to='/Summarize'>企业概述</router-link>
           </li>
           <li class='padding-10'>
             <router-link name="Brand" to='/About/Brand'>品牌故事</router-link>
@@ -29,7 +23,11 @@
   </div>
 </template>
 <script>
+import comImg from './common/index'
 export default {
+  components: {
+    comImg
+  }
 }
 </script>
 <style lang='less'>

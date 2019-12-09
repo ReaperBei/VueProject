@@ -1,1 +1,115 @@
 @import '~comcolor';
+// summarize样式
+.summarize-box{
+    padding: 30px;
+    background: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #222;
+    word-wrap: break-word;
+    p{
+        .title-box{
+            font-size: 14px; 
+            color: rgb(89, 89, 89);
+            line-height: 30px;
+        }
+    }
+}
+.video-box{
+        display: inline-flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    li{
+        overflow: hidden;
+        .video-box-content{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            vertical-align: middle;
+            text-align: center;
+            display: flex;
+            padding-bottom:15px;
+            .video-content{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 20px;
+                color: #fff;
+                .vertical-align-middle{
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .video-ledgement{
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        margin: 10px auto;
+                        background-color: white;
+                    }
+                }
+            }
+            .video-btn{
+                display: inline-block;
+                display: inline-flex;
+                border: 1px solid;
+                padding: 12px;
+                &:hover{
+                    background-color: white;
+                }
+                &:hover span{
+                    color: #76838f;
+                }
+            }
+        }
+    }
+}
+@media (min-width:100px) and (max-width:768px){  
+    .video-box li{
+        width: 100%;
+    }
+}
+@media (min-width:768px){
+    .video-box li{
+        width: 49%;
+    }
+}
+@media (min-width:992px){
+    .video-box li{
+        width: 23%;
+    }
+    .advertising-content{
+        font-size: 18px;
+    }
+    .video-box li{
+        .video-box-content{
+            .video-btn{
+                padding: 8px;
+            }
+        }
+    }
+    // .video-box {
+    //     li {
+    //         .video-box-content {
+    //             .video-content{
+    //                 padding: 50px;
+    //             }
+    //         }
+    //     }
+    // }
+}
+@media (min-width:1200px){
+    .video-box li{
+        width: 23%;
+    }
+    .advertising-content{
+        font-size: 25px;
+    }
+}
