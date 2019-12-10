@@ -3,20 +3,17 @@
     <div>
       <comImg />
       <div class='about-nav'>
-        <ul class='flx justify-cent'>
-          <li class='padding-10'>
-            <router-link name="Summarize" to='/Summarize'>企业概述</router-link>
-          </li>
-          <li class='padding-10'>
-            <router-link name="Brand" to='/About/Brand'>品牌故事</router-link>
-          </li>
-          <li class='padding-10'>
-            <router-link name="Honor" to='/About/Honor'>资质荣誉</router-link>
-          </li>
-          <li class='padding-10'>
-            <router-link name="Video" to='/About/Video'>资质视频</router-link>
-          </li>
-        </ul>
+        <div class="flx justify-cent">
+          <div
+            class="flx justify-cent relation-tab padding-10"
+            v-for="(ietm, index) in list"
+            :key="index"
+            v-on:click="addClass(index,$event)"
+            v-bind:class="{ blue:index==current}"
+          >
+            <router-link :to="ietm.dizhi" class="nav-tab font-16">{{ietm.text}}</router-link>
+          </div>
+        </div>
       </div>
       <router-view></router-view>
     </div>
@@ -25,11 +22,31 @@
 <script>
 import comImg from './common/index'
 export default {
+  data () {
+    return {
+      current: 0,
+      list: [{
+        text: '企业概述', dizhi: 'Summarize'
+      }, {
+        text: '品牌故事', dizhi: 'Brand'
+      }, {
+        text: '资质荣誉', dizhi: 'Honor'
+      }, {
+        text: '资质视频', dizhi: 'Video'
+      }]
+    }
+  },
   components: {
     comImg
+  },
+  methods: {
+    addClass: function (index, event) {
+      this.current = index
+      console.log(index)
+    }
   }
 }
 </script>
-<style lang='less'>
+<style lang='less' scoped>
 @import './css/index.less';
 </style>

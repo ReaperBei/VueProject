@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElemetUi from 'element-ui'
+import state from 'cmp/store'
 import './css/element-variables.scss'
 import './css/public.less'
 
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  state,
   components: { App },
   template: '<App/>'
 })

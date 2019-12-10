@@ -55,10 +55,10 @@
                 </div>
               </router-link>
               <ul class="nav-hov">
-                <li>公司新闻</li>
-                <li>行业动态</li>
-                <li>媒体聚焦</li>
-                <li>市场活动</li>
+                <router-link to="/Company"><li>公司新闻</li></router-link>
+                <router-link to="/Industry"><li>行业动态</li></router-link>
+                <router-link to="/Bazaar"><li>媒体聚焦</li></router-link>
+                <router-link to="/Media"><li>市场活动</li></router-link>
               </ul>
             </li>
             <li>

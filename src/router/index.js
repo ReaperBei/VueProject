@@ -19,6 +19,12 @@ import Company from 'cmp/Main/News/company.vue'
 import Industry from 'cmp/Main/News/industry.vue'
 import Bazaar from 'cmp/Main/News/bazaar.vue'
 import Media from 'cmp/Main/News/media.vue'
+// 产品中心
+import Total from 'cmp/Main/Product/total.vue'
+import Bistro from 'cmp/Main/Product/bistro.vue'
+import Liquid from 'cmp/Main/Product/liquid.vue'
+import Alveolus from 'cmp/Main/Product/alveolus.vue'
+import Rests from 'cmp/Main/Product/rests.vue'
 
 Vue.use(Router)
 
@@ -40,15 +46,15 @@ export default new Router({
           name: 'Summarize',
           component: Summarize
         }, {
-          path: 'Brand',
+          path: '/Brand',
           name: 'Brand',
           component: Brand
         }, {
-          path: 'Honor',
+          path: '/Honor',
           name: 'Honor',
           component: Honor
         }, {
-          path: 'Video',
+          path: '/Video',
           name: 'Video',
           component: Video
         }
@@ -56,7 +62,24 @@ export default new Router({
     }, {
       path: '/Product',
       name: 'Product',
-      component: Product
+      component: Product,
+      redirect: '/Total',
+      children: [{
+        path: '/Total',
+        component: Total
+      }, {
+        path: '/Bistro',
+        component: Bistro
+      }, {
+        path: '/Liquid',
+        component: Liquid
+      }, {
+        path: '/Alveolus',
+        component: Alveolus
+      }, {
+        path: '/Rests',
+        component: Rests
+      }]
     }, {
       path: '/Shopping',
       name: 'Shopping',
