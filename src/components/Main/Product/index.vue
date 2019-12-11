@@ -46,7 +46,6 @@ export default {
   methods: {
     addClass: function (index, event) {
       this.current = index
-      console.log(index)
     }
   }
 }

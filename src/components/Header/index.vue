@@ -16,16 +16,20 @@
             </li>
             <li>
               <router-link to="About">
-                <div class="list-content">
+                <div class="list-content" @click="addIndex(index)">
                   <span>关于我们</span>
                   <span class="el-icon-caret-bottom"></span>
                 </div>
               </router-link>
               <ul class="nav-hov">
-                <li>企业概况</li>
-                <li>品牌故事</li>
-                <li>资质荣誉</li>
-                <li>视频短片</li>
+                <li
+                  v-for="(ietm, index) in Summarize"
+                  :key="index"
+                  v-on:click="addClass(index,$event)">
+                  <router-link :to="ietm.dizhi">
+                    {{ietm.title}}
+                  </router-link>
+                </li>
               </ul>
             </li>
             <li>
@@ -159,13 +163,31 @@
 export default {
   data () {
     return {
+      index: 0,
       show: false,
-      isshow: false
+      isshow: false,
+      Summarize: [{
+        title: '企业概况', dizhi: '/Summarize'
+      }, {
+        title: '品牌故事', dizhi: 'Brand'
+      }, {
+        title: '资质荣誉', dizhi: 'Honor'
+      }, {
+        title: '视频短片', dizhi: 'Video'
+      }]
+    }
+  },
+  methods: {
+    addClass (index, event) {
+      this.current = index
+      this.$store.commit('chang', index)
+    },
+    addIndex (index,event) {
+      this.$store.commit('chang', index)
     }
   }
 }
 </script>
 <style scoped lang="less">
 @import "./css/index.less";
-
 </style>

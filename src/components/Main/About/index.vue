@@ -9,7 +9,7 @@
             v-for="(ietm, index) in list"
             :key="index"
             v-on:click="addClass(index,$event)"
-            v-bind:class="{ blue:index==current}"
+            v-bind:class="{ blue:index==$store.state.login.tabIndex}"
           >
             <router-link :to="ietm.dizhi" class="nav-tab font-16">{{ietm.text}}</router-link>
           </div>
@@ -40,9 +40,8 @@ export default {
     comImg
   },
   methods: {
-    addClass: function (index, event) {
-      this.current = index
-      console.log(index)
+    addClass (index, event) {
+      this.$store.state.login.tabIndex = index
     }
   }
 }

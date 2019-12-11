@@ -1,7 +1,10 @@
 let state = {
-  index: null
+  tabIndex: 0
 }
 let mutations = {
+  chang (state, index) {
+    state.tabIndex = parseInt(index)
+  }
 }
 let actions = {
 }
