@@ -34,16 +34,20 @@
             </li>
             <li>
               <router-link to="Product">
-                <div class="list-content">
+                <div class="list-content" @click="addInd(index)">
                   产品中心
                   <span class="el-icon-caret-bottom"></span>
                 </div>
               </router-link>
               <ul class="nav-hov">
-                <li>人民小酒</li>
-                <li>藏龙液</li>
-                <li>人民小酒</li>
-                <li>其他</li>
+                <li
+                  v-for="(ietm, index) in Total"
+                  :key="index"
+                  v-on:click="addtabIndex(index,$event)">
+                  <router-link :to="ietm.dizhi">
+                    {{ietm.title}}
+                  </router-link>
+                </li>
               </ul>
             </li>
             <li>
@@ -67,14 +71,20 @@
             </li>
             <li>
               <router-link to="Service">
-                <div class="list-content">
+                <div class="list-content" @click="addIndex(index)">
                   服务支持
                   <span class="el-icon-caret-bottom"></span>
                 </div>
               </router-link>
               <ul class="nav-hov">
-                <li>招商加盟</li>
-                <li>联系我们</li>
+                <li
+                  v-for="(ietm, index) in Merchants"
+                  :key="index"
+                  v-on:click="addClass(index,$event)">
+                  <router-link :to="ietm.dizhi">
+                    {{ietm.title}}
+                  </router-link>
+                </li>
               </ul>
             </li>
           </ul>
@@ -167,13 +177,27 @@ export default {
       show: false,
       isshow: false,
       Summarize: [{
-        title: '企业概况', dizhi: '/Summarize'
+        title: '企业概况', dizhi: 'Summarize'
       }, {
         title: '品牌故事', dizhi: 'Brand'
       }, {
         title: '资质荣誉', dizhi: 'Honor'
       }, {
         title: '视频短片', dizhi: 'Video'
+      }],
+      Total: [{
+        title: '人名小酒', dizhi: 'Bistro'
+      }, {
+        title: '藏龙液', dizhi: 'Liquid'
+      }, {
+        title: '小锅酒', dizhi: 'Alveolus'
+      }, {
+        title: '其他', dizhi: 'Rests'
+      }],
+      Merchants: [{
+        title: '招商加盟', dizhi: 'Merchants'
+      }, {
+        title: '联系我们', dizhi: 'Relation'
       }]
     }
   },
@@ -183,6 +207,15 @@ export default {
       this.$store.commit('chang', index)
     },
     addIndex (index,event) {
+      var index = 0
+      this.$store.commit('chang', index)
+    },
+    addtabIndex (index, event) {
+      this.current = index
+      this.$store.commit('chang', (index+1))
+    },
+    addInd (index,event) {
+      var index = 0
       this.$store.commit('chang', index)
     }
   }

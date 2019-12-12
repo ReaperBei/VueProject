@@ -10,13 +10,13 @@
           v-for="(ietm, index) in todos"
           :key="index"
           v-on:click="addClass(index,$event)"
-          v-bind:class="{ blue:index==current}"
+          v-bind:class="{blue:index==$store.state.login.tabIndex}"
         >
           <router-link :to="ietm.dizhi" class="nav-tab">{{ietm.text}}</router-link>
         </div>
       </div>
       <div class="container">
-        <router-view></router-view>
+        <router-view :key="key"></router-view>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     addClass: function (index, event) {
-      this.current = index
+      this.$store.state.login.tabIndex = index
     }
   }
 }

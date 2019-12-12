@@ -33,35 +33,28 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
       component: Home
     }, {
       path: '/About',
-      name: 'About',
       component: About,
       redirect: '/Summarize',
       children: [
         {
           path: '/Summarize',
-          name: 'Summarize',
           component: Summarize
         }, {
           path: '/Brand',
-          name: 'Brand',
           component: Brand
         }, {
           path: '/Honor',
-          name: 'Honor',
           component: Honor
         }, {
           path: '/Video',
-          name: 'Video',
           component: Video
         }
       ]
     }, {
       path: '/Product',
-      name: 'Product',
       component: Product,
       redirect: '/Total',
       children: [{
@@ -82,11 +75,9 @@ export default new Router({
       }]
     }, {
       path: '/Shopping',
-      name: 'Shopping',
       component: Shopping
     }, {
       path: '/News',
-      name: 'News',
       component: News,
       redirect: '/Company',
       children: [{
@@ -104,7 +95,6 @@ export default new Router({
       }]
     }, {
       path: '/Service',
-      name: 'Service',
       component: Service,
       redirect: '/Merchants',
       children: [{
